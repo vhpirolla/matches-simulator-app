@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivHomeTeamFlag"
+            android:layout_width="@dimen/team_image_size"
+            android:layout_height="@dimen/team_image_size"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/cd_home_team"/>
+
+        <TextView
+            android:id="@+id/tv_HomeTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default"
+            tools:text="Home Team"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivHomeTeamFlag"
+            app:layout_constraintStart_toStartOf="@+id/ivHomeTeamFlag"
+            app:layout_constraintTop_toBottomOf="@+id/ivHomeTeamFlag" />
+
+        <TextView
+            android:id="@+id/tv_HomeTeamScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/ivHomeTeamFlag"
+            app:layout_constraintEnd_toStartOf="@+id/tvVersus"
+            app:layout_constraintStart_toEndOf="@+id/ivHomeTeamFlag"
+            app:layout_constraintTop_toTopOf="@+id/ivHomeTeamFlag" />
+
+        <TextView
+            android:id="@+id/tvVersus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_versus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/ivHomeTeamFlag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivHomeTeamFlag" />
+
+        <ImageView
+            android:id="@+id/ivAwayTeamFlag"
+            android:layout_width="@dimen/team_image_size"
+            android:layout_height="@dimen/team_image_size"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/away_team_image"/>
+
+        <TextView
+            android:id="@+id/tvAwayTeamScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            tools:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAwayTeamFlag"
+            app:layout_constraintEnd_toStartOf="@+id/ivAwayTeamFlag"
+            app:layout_constraintStart_toEndOf="@+id/tvVersus"
+            app:layout_constraintTop_toTopOf="@+id/ivAwayTeamFlag" />
+
+        <TextView
+            android:id="@+id/tvAwayTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Away Team"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivAwayTeamFlag"
+            app:layout_constraintStart_toStartOf="@+id/ivAwayTeamFlag"
+            app:layout_constraintTop_toBottomOf="@+id/ivAwayTeamFlag" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
